@@ -5,6 +5,7 @@ from rockpaperscissors import *
 from numbergame import *
 from tictactoe import *
 from connect4 import *
+from hangman import *
 
 game_lib = {
     1: "Rock Paper Scissors",
@@ -18,6 +19,7 @@ Your game library:
 2: Numbers Game
 3: TictacToe
 4. Connect 4
+5. Hangman
 """)
     game_choice = input("""
 What game would you like to play?
@@ -38,6 +40,10 @@ Input the game ID, or type 'exit' to exit.
 
     elif game_choice == '4':
         play_connect4()
+        game_choice = None
+     
+    elif game_choice == '5':
+        hangman()
         game_choice = None
 
     elif game_choice == 'exit':
